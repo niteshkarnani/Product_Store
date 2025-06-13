@@ -3,10 +3,12 @@ import { Link, useResolvedPath } from 'react-router-dom';
 import { ShoppingCartIcon,ShoppingBagIcon} from 'lucide-react';
 import ThemeSelector from './ThemeSelector';
 import { useThemeStore } from '../store/useThemeStore.js';
+import { useProductStore } from '../store/useProductStore.js';
 
 function NavBar() {
   const {pathname}=useResolvedPath() 
   const isHomePage=pathname==="/"
+  const {products}=useProductStore
 
   
 
